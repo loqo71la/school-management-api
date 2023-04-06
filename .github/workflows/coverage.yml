@@ -1,0 +1,32 @@
+name: Coverage Analysis
+
+on:
+  pull_request:
+    branches: 
+      - main
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  rest-api-coverage:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./rest-api
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java SDK
+        uses: actions/setup-java@v3.4.0
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Generate coverage report
+        run: ./gradlew test
+
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v2
