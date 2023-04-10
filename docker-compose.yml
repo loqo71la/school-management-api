@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+    sm-postgres:
+        container_name: sm-postgres
+        image: postgres:14.3-alpine
+        environment:
+            POSTGRES_DB: sm
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: Password123!
+        volumes:
+            - sm-postgres-data:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+
+    school-management-api:
+        container_name: school-management-api
+        image: loqo71la/school-management-api:latest
+        environment:
+            SPRING_DATASOURCE_URL: jdbc:postgresql://sm-postgres:5432/sm
+            SPRING_DATASOURCE_USERNAME: postgres
+            SPRING_DATASOURCE_PASSWORD: Password123!
+        depends_on:
+            - sm-postgres
+        ports:
+            - 8080:8080
+
+volumes:
+    sm-postgres-data:
