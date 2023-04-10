@@ -12,9 +12,6 @@ on:
 jobs:
   rest-api-coverage:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./rest-api
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
