@@ -2,7 +2,8 @@
 [![codecov](
 https://img.shields.io/badge/SchoolManagement-4E69C8?labelColor=4E69C8&amp;logo=Firefox&amp;)](https://school-management.loqo71la.dev)
 [![docker](https://img.shields.io/docker/v/loqo71la/school-management-api)](https://hub.docker.com/r/loqo71la/school-management-api)
-[![Unit Test](https://github.com/loqo71la/school-management/actions/workflows/coverage.yml/badge.svg)](https://github.com/loqo71la/school-management/actions/workflows/coverage.yml)
+[![Unit Test](https://github.com/loqo71la/school-management-api/actions/workflows/coverage.yml/badge.svg)](https://github.com/loqo71la/school-management-api/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/loqo71la/school-management-api/branch/main/graph/badge.svg?token=EN4SEZUHOB)](https://codecov.io/gh/loqo71la/school-management-api)
 
 It is a robust and scalable solution for managing classes and students in an educational environment. It allows educators to register and manage classes, students, grades, location, teacher assignments and more. Additionally, it offers advanced security features suhch as authentication and authorization to ensure the protection of sensitive student data.
 
