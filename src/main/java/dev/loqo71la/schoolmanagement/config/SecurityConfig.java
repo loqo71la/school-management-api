@@ -55,10 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         var configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(
-                List.of("http://localhost:5173",
-                        "https://school-management.loqo71la.dev",
-                        "https://www.school-management.loqo71la.dev"));
+        configuration.setAllowedOriginPatterns(List.of("http://*:5173", "https://*.loqo71la.dev"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         configuration.setExposedHeaders(List.of("Authorization", "Content-Type"));
